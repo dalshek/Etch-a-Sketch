@@ -17,9 +17,14 @@
     flex-shrink: 0;
 }
 
+.hover{
+    background-color: red;
+}
+
 .main{
     display: flex;
     flex-wrap: wrap;
     width: 430px;
     height: 430px;
+    margin: 100px;
 }
