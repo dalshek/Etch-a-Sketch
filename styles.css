@@ -1,0 +1,25 @@
+/*.prueba{
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+    margin: 3px;
+}
+
+.ytal{
+    display: flex;
+}*/
+
+.grid{
+    width: 20px;
+    height: 20px;
+    background-color: aqua;
+    margin: 3px;
+    flex-shrink: 0;
+}
+
+.main{
+    display: flex;
+    flex-wrap: wrap;
+    width: 430px;
+    height: 430px;
+}
