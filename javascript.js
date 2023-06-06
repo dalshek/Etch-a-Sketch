@@ -28,7 +28,6 @@ let createDivs = () => {
 }
 
 let createGrid = (dim) => {
-    
     for(let i=1; i<=dim;i++){
         
         for(let j=1; j<=dim; j++){
@@ -40,21 +39,19 @@ let createGrid = (dim) => {
 createGrid(16);
 
 const but = document.querySelector('.selection');
+const ind = document.querySelectorAll('.grid');
 
 but.addEventListener("click", () => {
-    createGrid(prompt());
+    
+    const ind = document.querySelectorAll('.grid');
+    ind.forEach(element => element.remove());
+
+    createGrid(prompt("Select number of files and columns"));
+
 
 });
 
-//createGrid(valor);
 
-
-//changingGrid();
-
-
-//HOVER EFFECT
-
-const ind = document.querySelectorAll('.grid');
 
 ind.forEach((list) => {
     list.addEventListener("mouseenter" , () => {
