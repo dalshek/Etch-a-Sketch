@@ -1,18 +1,24 @@
 //-----GLOBAL VARIABLES----------
 let div='';
-//---------------CREATIN THE MAIN DIV------------
+let valor = 16;
+
+
+//---------------CREATING THE TOP BUTTON---------
+const topButton = document.createElement('button');
+topButton.setAttribute("class", "selection");
+document.body.appendChild(topButton);
+topButton.textContent="SELECT GRID NUMBER";
+
+//---------------CREATING THE MAIN DIV------------
 const divMain = document.createElement('div');
-divMain.setAttribute("class", "main")
+divMain.setAttribute("class", "main");
 document.body.appendChild(divMain);
+
+
 
 //Creating the 16x16 grid
 const mainDom = document.querySelector('.main');
 
-
-
-/*mainDom.addEventListener("mouseover", () =>{
-    div.classList.add('hover');
-})*/
 
 let createDivs = () => {
     div = document.createElement('div');
@@ -21,12 +27,30 @@ let createDivs = () => {
     mainDom.appendChild(div);
 }
 
-for(let i=1; i<=16;i++){
+let createGrid = (dim) => {
     
-    for(let j=1; j<=16; j++){
-        createDivs();
-    }      
+    for(let i=1; i<=dim;i++){
+        
+        for(let j=1; j<=dim; j++){
+            createDivs();
+        }      
+    }
 }
+
+createGrid(16);
+
+const but = document.querySelector('.selection');
+
+but.addEventListener("click", () => {
+    createGrid(prompt());
+
+});
+
+//createGrid(valor);
+
+
+//changingGrid();
+
 
 //HOVER EFFECT
 
@@ -43,4 +67,14 @@ ind.forEach((list) => {
     list.classList.add('enter');
 });
 });
+
+
+
+
+
+
+
+
+
+
 
