@@ -16,7 +16,7 @@ document.body.appendChild(divMain);
 
 
 
-//Creating the 16x16 grid
+//FUNCTIONS
 const mainDom = document.querySelector('.main');
 
 
@@ -34,36 +34,37 @@ let createGrid = (dim) => {
             createDivs();
         }      
     }
+    const ind = document.querySelectorAll('.grid');
+
+    ind.forEach((list) => {
+        list.addEventListener("mouseenter" , () => {
+        list.classList.add('hover');
+    });
+    });
+
 }
 
+//CREATING THE GRID
 createGrid(16);
 
 const but = document.querySelector('.selection');
 const ind = document.querySelectorAll('.grid');
 
+//BUTTON LISTENER (CREATES USER GRID)
 but.addEventListener("click", () => {
     
     const ind = document.querySelectorAll('.grid');
     ind.forEach(element => element.remove());
 
-    createGrid(prompt("Select number of files and columns"));
-
+    createGrid(prompt("Select number of files per columns"));
 
 });
 
 
 
-ind.forEach((list) => {
-    list.addEventListener("mouseenter" , () => {
-    list.classList.add('hover');
-});
-});
 
-ind.forEach((list) => {
-    list.addEventListener("click" , () => {
-    list.classList.add('enter');
-});
-});
+
+
 
 
 
