@@ -8,12 +8,16 @@ document.body.appendChild(divMain);
 //Creating the 16x16 grid
 const mainDom = document.querySelector('.main');
 
+
+
+/*mainDom.addEventListener("mouseover", () =>{
+    div.classList.add('hover');
+})*/
+
 let createDivs = () => {
     div = document.createElement('div');
     div.setAttribute("class", "grid");
-    mainDom.addEventListener("mouseover", () =>{
-        div.classList.add('hover');
-    })
+
     mainDom.appendChild(div);
 }
 
@@ -25,4 +29,18 @@ for(let i=1; i<=16;i++){
 }
 
 //HOVER EFFECT
+
+const ind = document.querySelectorAll('.grid');
+
+ind.forEach((list) => {
+    list.addEventListener("mouseenter" , () => {
+    list.classList.add('hover');
+});
+});
+
+ind.forEach((list) => {
+    list.addEventListener("click" , () => {
+    list.classList.add('enter');
+});
+});
 

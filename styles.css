@@ -21,6 +21,10 @@
     background-color: red;
 }
 
+.enter{
+    background-color: black;
+}
+
 .main{
     display: flex;
     flex-wrap: wrap;
