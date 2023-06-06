@@ -56,7 +56,13 @@ but.addEventListener("click", () => {
     const ind = document.querySelectorAll('.grid');
     ind.forEach(element => element.remove());
 
-    createGrid(prompt("Select number of files per columns"));
+    const value = prompt("Select");
+
+    if (value>64) alert("Max dimension: 64")
+
+    //createGrid(prompt("Select number of files per columns"));
+
+    else createGrid(value);
 
 });
 
